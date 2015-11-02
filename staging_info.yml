@@ -1,0 +1,7 @@
+---
+buildpack_path: /var/vcap/data/dea_next/admin_buildpacks/33919c57-90fd-4532-8fb0-06aef7c65ff3_4c6a4a3da69cf87299e5b0f71f548da158ca6845
+detected_buildpack: ASP.NET 5 Experimental
+start_command: sleep 999999 | dnx --project src/dotnetstarter kestrel --server.urls
+  http://${VCAP_APP_HOST}:${PORT}
+effective_procfile:
+  web: sleep 999999 | dnx --project src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:$
